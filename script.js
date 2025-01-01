@@ -1,24 +1,23 @@
-const myLibrary = [];
+const myLibrary = []
 let isRead = false
 
 const toggleIsRead = document.querySelector(".read")
 toggleIsRead.addEventListener("click", () => {
-    if (isRead == true) {
+    if (isRead) {
         toggleIsRead.textContent = "not read"
         isRead = false
-    } else if (isRead == false) {
+    } else {
         toggleIsRead.textContent = "read"
         isRead = true
     }
 })
-
 
 const createBook = () => {
     return {
         title: document.getElementById("input1").value,
         author: document.getElementById("input2").value,
         pages: document.getElementById("input3").value,
-        read: document.getElementById("input4").textContent,
+        read: readValue(document.getElementById("input4").textContent),
     }
 }
 
@@ -67,7 +66,7 @@ function displayBooks() {
             </div>
             <div class="actions">
                 <div class="actionButtons">
-                    <button id="read-${i}" class="buttonIsRead">${book.read}</button>
+                    <button id="read-${i}" class="buttonIsRead">${readString(book.read)}</button>
                     <button id="delete-${i}" class="delete">Delete</button>
                 </div>
             </div>
@@ -75,21 +74,25 @@ function displayBooks() {
 
         content.appendChild(div);
 
-        deleteBtn = document.getElementById(`delete-${i}`)
+        let deleteBtn = document.getElementById(`delete-${i}`)
         deleteBtn.addEventListener("click", () => {
             myLibrary.splice(i, 1)
             displayBooks()
         })
 
-        buttonIsRead = document.getElementById(`read-${i}`)
+        let buttonIsRead = document.getElementById(`read-${i}`)
         buttonIsRead.addEventListener("click", () => {
-            if (buttonIsRead.textContent == "read"){
-                i.buttonIsRead.textContent = "not read"
-            } else {
-                i.buttonIsRead.textContent = 'read'
-            }
-
+            const book = myLibrary[i]
+            book.read = !book.read
+            buttonIsRead.textContent = readString(book.read)
         })
-    
 })}
+
+const readString = (read) => {
+    return read ? 'not read' : 'read'
+}
+
+const readValue = (readString) => {
+    return readString == 'not read'
+}
 
