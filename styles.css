@@ -4,6 +4,7 @@ body {
     border: 0;
     display: flex;
     flex-direction: column;
+    background-color: grey;
 }
 
 header {
@@ -19,13 +20,13 @@ header {
 }
 
 input[type='text'] {
-    width: 30vw;
+    width: calc(200px + 10vw);
     margin: 20px;
     margin-top: 0;
 }
 
 input[type='number']{
-    width: 30vw;
+    width: calc(200px + 10vw);
     margin: 20px;
     margin-top: 0;
 }
@@ -34,18 +35,13 @@ label {
     margin-top: 20px;
 }
 
-input[type='checkbox'] {
-    margin: 20px;
-    margin-top: 3px;
-}
-
 .container {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(72, 50, 132, 1), rgba(216, 187, 187, 1))
+    background: linear-gradient( rgb(51, 74, 56), rgb(194, 191, 202))
 }
 
 .add {
@@ -124,4 +120,11 @@ button:hover {
     margin: 10px;
     border-radius: 20px;
     padding: 10px;
+}
+
+.buttonIsRead,.delete {
+    background-color: rgb(169, 178, 164);
+    border: 1px solid navy;
+    border-radius: 10px;
+    padding: 5px;
 }
