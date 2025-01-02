@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    height: 80px;
+    height: 10vh;
     background: linear-gradient(#695352, #505370);
     margin: 0;
     padding: 0;
@@ -52,8 +52,8 @@ label {
     border: 0;
     padding: 5px;
     border-radius: 35px;
-    height: 40px;
-    width: 100px;
+    height: 5vh;
+    width: 7vw;
     font-size: large;
 }
 
