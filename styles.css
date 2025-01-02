@@ -132,7 +132,7 @@ button:hover {
 
 @media (width <= 1000px) {
     header {
-        font-size: 4vh;
+        font-size: 3vh;
     }
 
     .card {
@@ -140,14 +140,15 @@ button:hover {
     }
 
     .add {
-        width: 30vw;
-        height: 9vh;
+        width: 50vw;
+        height: 10vh;
         font-size: 4vh;
     }
 
     .container{
         width: 90vw;
         height: 70vh;
+        justify-content: start;
     }
 
     input[type='text'] {
@@ -160,6 +161,16 @@ button:hover {
         width: 80vw;
         height: 3vh;
         font-size: 2vh;
+    }
+
+    .modal {
+        align-items: start;
+        font-size: x-large;
+    }
+
+    button {
+        text-align: center;
+        font-size: x-large;
     }
   }
   
