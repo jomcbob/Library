@@ -53,7 +53,7 @@ label {
     padding: 5px;
     border-radius: 35px;
     height: 5vh;
-    width: 7vw;
+    width: 8vw;
     font-size: large;
 }
 
@@ -129,3 +129,35 @@ button:hover {
     border-radius: 10px;
     padding: 5px;
 }
+
+@media (width <= 900px) {
+    header {
+        font-size: 8vh;
+    }
+
+    .card {
+        font-size: x-large;
+    }
+
+    .add {
+        width: 30vw;
+        height: 8vw;
+        font-size: 6vh;
+    }
+
+    .container{
+        width: 90vw;
+        height: 70vh;
+    }
+
+    input[type='text'] {
+        width: 80vw;
+        height: 8vh;
+    }
+
+    input[type='number'] {
+        width: 80vw;
+        height: 8vh;
+    }
+  }
+  

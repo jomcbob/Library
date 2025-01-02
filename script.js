@@ -1,6 +1,15 @@
 const myLibrary = []
+const modal = document.getElementById("my-modal")
+const input1 = document.getElementById("input1")
+const input2 = document.getElementById("input2")
+const input3 = document.getElementById("input3")
+const input4 = document.getElementById("input4")
+const addButton = document.querySelector('.add')
+const cancelBtn = document.getElementById("close")
+const submitBtn = document.getElementById("submitButton")
 let isRead = false
 
+// for the form toggle not book toggle
 const toggleIsRead = document.querySelector(".read")
 toggleIsRead.addEventListener("click", () => {
     if (isRead) {
@@ -20,16 +29,6 @@ const createBook = () => {
         read: readValue(document.getElementById("input4").textContent),
     }
 }
-
-const modal = document.getElementById("my-modal")
-const input1 = document.getElementById("input1")
-const input2 = document.getElementById("input2")
-const input3 = document.getElementById("input3")
-const input4 = document.getElementById("input4")
-
-const addButton = document.querySelector('.add')
-const cancelBtn = document.getElementById("close")
-const submitBtn = document.getElementById("submitButton")
 
 addButton.addEventListener("click", () => {
     modal.classList.remove("hidden")
