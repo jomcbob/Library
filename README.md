@@ -1,1 +1,1 @@
-view live <a herf="https://jomcbob.github.io/Library/index.html">here</a>
+view live https://jomcbob.github.io/Library/index.html"
