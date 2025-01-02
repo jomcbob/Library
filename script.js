@@ -11,6 +11,7 @@ let isRead = false
 
 // for the form toggle not book toggle
 const toggleIsRead = document.querySelector(".read")
+toggleIsRead.textContent = 'not read'
 toggleIsRead.addEventListener("click", () => {
     if (isRead) {
         toggleIsRead.textContent = "not read"
@@ -43,7 +44,7 @@ submitBtn.addEventListener("click", () => {
     myLibrary.push(book)
     displayBooks()
     modal.classList.add("hidden")
-    
+
     document.getElementById("input1").value = ''
     document.getElementById("input2").value = ''
     document.getElementById("input3").value = ''
