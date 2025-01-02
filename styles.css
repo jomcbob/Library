@@ -169,6 +169,10 @@ input:focus{
         color: aquamarine;
     }
 
+    legend{
+        color: aquamarine;
+    }
+
     input[type='number'] {
         width: 80vw;
         height: 3vh;
@@ -186,18 +190,21 @@ input:focus{
     }
 
     .card,button{
-        font-size: large;
-        width: 40%;
+        font-size: x-large;
+        width: 70%;
+        padding: 10px;
     }
 
     .formButtons {
-        width: 30%;
-        font-size: large;
+        height: 7vh;
+        width: 30vw;
+        font-size: xx-large;
     }
 
     .read {
-        width: 30%;
-        font-size: large;
+        height: 7vh;
+        width: 30vw;
+        font-size: xx-large;
     }
   }
   
