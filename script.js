@@ -42,8 +42,8 @@ submitBtn.addEventListener("click", () => {
     const book = createBook()
     myLibrary.push(book)
     displayBooks()
-
     modal.classList.add("hidden")
+    
     document.getElementById("input1").value = ''
     document.getElementById("input2").value = ''
     document.getElementById("input3").value = ''
