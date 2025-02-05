@@ -52,10 +52,11 @@ submitBtn.addEventListener("click", () => {
 })
 
 const addBook = function (){
-    let book = new createBook(input1.value, input2.value, input3.value, toggleIsRead.textContent)
+    let book = new createBook(input1.value, input2.value, input3.value, !isRead)
     myLibrary.push(book.giveValue())
     console.log(myLibrary)
     displayBooks()
+    isRead = false
 }
 
 function displayBooks() {
