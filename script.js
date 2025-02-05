@@ -9,7 +9,6 @@ const cancelBtn = document.getElementById("close")
 const submitBtn = document.getElementById("submitButton")
 let isRead = false
 
-// for the form toggle not book toggle
 const toggleIsRead = document.querySelector(".read")
 toggleIsRead.textContent = 'not read'
 toggleIsRead.addEventListener("click", () => {
@@ -22,16 +21,20 @@ toggleIsRead.addEventListener("click", () => {
     }
 })
 
-const createBook = () => {
-    return {
-        title: document.getElementById("input1").value,
-        author: document.getElementById("input2").value,
-        pages: document.getElementById("input3").value,
-        read: readValue(document.getElementById("input4").textContent),
+class createBook {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read
+        }  // true for 'read', false for 'not read'
+
+    giveValue(){
+        return ({title: this.title, author: this.author, pages: this.pages, read: this.read})
     }
 }
 
-addButton.addEventListener("click", () => {
+addButton.addEventListener('click', () => {
     modal.classList.remove("hidden")
 })
 
@@ -40,16 +43,20 @@ cancelBtn.addEventListener("click", () => {
 })
 
 submitBtn.addEventListener("click", () => {
-    const book = createBook()
-    myLibrary.push(book)
-    displayBooks()
     modal.classList.add("hidden")
-
+    addBook()
     document.getElementById("input1").value = ''
     document.getElementById("input2").value = ''
     document.getElementById("input3").value = ''
     document.getElementById("input4").textContent = 'not read'
 })
+
+const addBook = function (){
+    let book = new createBook(input1.value, input2.value, input3.value, toggleIsRead.textContent)
+    myLibrary.push(book.giveValue())
+    console.log(myLibrary)
+    displayBooks()
+}
 
 function displayBooks() {
     const content = document.querySelector(".content");
@@ -91,8 +98,3 @@ function displayBooks() {
 const readString = (read) => {
     return read ? 'not read' : 'read'
 }
-
-const readValue = (readString) => {
-    return readString == 'not read'
-}
-
