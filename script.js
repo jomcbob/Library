@@ -98,4 +98,3 @@ function displayBooks() {
 const readString = (read) => {
     return read ? 'not read' : 'read'
 }
-
