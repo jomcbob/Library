@@ -35,14 +35,17 @@ class createBook {
 
 addButton.addEventListener('click', () => {
     modal.classList.remove("hidden")
+    addButton.classList.add('hidden')
 })
 
 cancelBtn.addEventListener("click", () => {
     modal.classList.add("hidden")
+    addButton.classList.remove('hidden')
 })
 
 submitBtn.addEventListener("click", () => {
-    modal.classList.add("hidden")
+    modal.classList.add("hidden")    
+    addButton.classList.remove('hidden')
     addBook()
     document.getElementById("input1").value = ''
     document.getElementById("input2").value = ''

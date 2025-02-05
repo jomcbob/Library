@@ -1,17 +1,11 @@
 body {
     margin: 0;
-    padding: 0;
-    border: 0;
-    display: flex;
-    flex-direction: column;
     background-color: grey;
 }
 
 header {
-    height: 10vh;
+    height: 10svh;
     background: linear-gradient(#695352, #505370);
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,20 +13,14 @@ header {
     font-size: x-large;
 }
 
-input[type='text'] {
-    width: calc(200px + 10vw);
-    margin: 20px;
+input {
+    width: calc(200px + 15vw);
+    height: calc(10px + 3svh);
+    font-size: 3svh;
+    margin: 3svh;
     margin-top: 0;
     border: none;
-    border-radius: 10px;
-}
-
-input[type='number']{
-    width: calc(200px + 10vw);
-    margin: 20px;
-    margin-top: 0;
-    border: none;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 label {
@@ -57,15 +45,9 @@ label {
     padding: 5px;
     border-radius: 35px;
     height: 5vh;
-    width: 8vw;
+    width: 10vw;
     font-size: large;
-}
-
-/* hide popup */
-button {
-    width: 80px;
     margin: 20px;
-
 }
 
 .modal {
@@ -95,7 +77,8 @@ button {
     border: 0;
     padding: 5px;
     border-radius: 10px;
-
+    margin: 2svw;
+    width: calc(30px + 5svw);
 }
 
 button:hover {
@@ -140,30 +123,30 @@ input:focus{
 
 @media (width <= 1000px) {
     header {
-        font-size: 3vh;
+        font-size: 3svh;
     }
 
     .card {
         font-size: x-large;
-        width: 100vw;
+        width: 100svw;
     }
 
     .add {
-        width: 50vw;
-        height: 10vh;
-        font-size: 4vh;
+        width: 50svw;
+        height: 10svh;
+        font-size: 4svh;
     }
 
     .container{
-        width: 90vw;
-        height: 70vh;
+        width: 90svw;
+        height: 100svh;
         justify-content: start;
     }
 
-    input[type='text'] {
-        width: 80vw;
-        height: 3vh;
-        font-size: 2vh;
+    input {
+        width: 80svw;
+        height: 6svh;
+        font-size: 5svh;
     }
 
     label{
@@ -174,34 +157,30 @@ input:focus{
         color: aquamarine;
     }
 
-    input[type='number'] {
-        width: 80vw;
-        height: 3vh;
-        font-size: 2vh;
-    }
-
     .modal {
         align-items: start;
         font-size: x-large;
     }
 
-    button {
-        text-align: center;
-        font-size: x-large;
-    }
-
-    .card,button{
+    .card button{
         font-size: x-large;
         padding: 5px;
         margin: 0;
         margin-top: 10px;
-        width: fit-content;
     }
 
-    .formButtons,button {
-        height: 7vh;
-        width: 60vw;
-        font-size: 4vh;
+    .formButtons button {
+        height: 7svh;
+        color: rgb(21, 22, 22);
+        width: 30svw;
+        font-size: 3svw;
+    }
+
+    .formButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .read {
@@ -210,4 +189,9 @@ input:focus{
         font-size: 4vh;
     }
   }
+
+  button:hover {
+    background-color: #27276a;
+    color: white;
+}
   
