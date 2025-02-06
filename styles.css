@@ -177,6 +177,16 @@ input:focus{
         font-size: x-large;
     }
 
+    .yo {
+        width: 50svw;
+        height: 6svh;
+    }
+
+    .actionButtons{
+        display: flex;
+        flex-direction: column;
+    }
+
     .card button{
         font-size: x-large;
         padding: 5px;
