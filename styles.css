@@ -3,6 +3,21 @@ body {
     background-color: grey;
 }
 
+.actionButtons{
+    display: flex;
+    gap: 20px;
+}
+
+.yo {
+    width: 6svw;
+    height: 3svh;
+    font-size: large;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    border-radius: 25px;
+    border: none;
+}
+
 header {
     height: 10svh;
     background: linear-gradient(#695352, #505370);

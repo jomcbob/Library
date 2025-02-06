@@ -76,8 +76,8 @@ function displayBooks() {
             </div>
             <div class="actions">
                 <div class="actionButtons">
-                    <button id="read-${i}" class="buttonIsRead">${readString(book.read)}</button>
-                    <button id="delete-${i}" class="delete">Delete</button>
+                    <button id="read-${i}" class="yo" class="buttonIsRead">${readString(book.read)}</button>
+                    <button id="delete-${i}" class="yo" class="delete">Delete</button>
                 </div>
             </div>
         `
