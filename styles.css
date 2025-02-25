@@ -1,26 +1,17 @@
 body {
     margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
     background-color: grey;
 }
 
-.actionButtons{
-    display: flex;
-    gap: 20px;
-}
-
-.yo {
-    width: 6svw;
-    height: 3svh;
-    font-size: large;
-    background-color: rgb(99, 99, 99);
-    color: white;
-    border-radius: 25px;
-    border: none;
-}
-
 header {
-    height: 10svh;
+    height: 10vh;
     background: linear-gradient(#695352, #505370);
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,18 +19,19 @@ header {
     font-size: x-large;
 }
 
-input {
-    width: calc(200px + 15vw);
-    height: calc(10px + 3svh);
-    font-size: 3svh;
-    margin: 3svh;
+input{
+    width: calc(200px + 10vw);
+    height: 5vh;
+    font-size: 4vh;
+    margin: 0 20px;
     margin-top: 0;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 label {
     margin-top: 20px;
+    font-size: x-large;
 }
 
 .container {
@@ -48,7 +40,24 @@ label {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgb(51, 74, 56), rgb(194, 191, 202))
+    background: linear-gradient( rgb(51, 74, 56), rgb(194, 191, 202))
+}
+
+.error {
+    background-color: red;
+    width: calc(200px + 10vw);
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: large;
+    border-radius:0 0 10px 10px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .add {
@@ -60,9 +69,15 @@ label {
     padding: 5px;
     border-radius: 35px;
     height: 5vh;
-    width: 10vw;
+    width: 8vw;
     font-size: large;
+}
+
+/* hide popup */
+button {
+    width: 80px;
     margin: 20px;
+
 }
 
 .modal {
@@ -75,25 +90,24 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-}
-
-.hidden {
+  }
+  
+  .hidden {
     display: none;
-}
+  }
 
 .formButtons button {
     background-color: #5664db;
     border: 0;
     padding: 5px;
     border-radius: 10px;
-    margin: 2svw;
-    width: calc(30px + 5svw);
+
 }
 
 button:hover {
@@ -125,52 +139,57 @@ button:hover {
     padding: 10px;
 }
 
-.buttonIsRead,
-.delete {
+.buttonIsRead,.delete {
     background-color: rgb(169, 178, 164);
     border: 1px solid navy;
     border-radius: 10px;
     padding: 5px;
 }
 
-input:focus {
+input:focus{
     border: 4px solid black;
 }
 
-@media (width <=1000px) {
+@media (width <= 1000px) {
     header {
-        font-size: 3svh;
+        font-size: 3vh;
     }
 
     .card {
         font-size: x-large;
-        width: 100svw;
+        width: 100vw;
     }
 
     .add {
-        width: 50svw;
-        height: 10svh;
-        font-size: 4svh;
+        width: 50vw;
+        height: 10vh;
+        font-size: 4vh;
     }
 
     .container{
-        width: 90svw;
-        height: 100svh;
+        width: 90vw;
+        height: 70vh;
         justify-content: start;
     }
 
-    input {
-        width: 80svw;
-        height: 6svh;
-        font-size: 5svh;
+    input[type='text'] {
+        width: 80vw;
+        height: 3vh;
+        font-size: 2vh;
     }
 
-    label {
+    label{
         color: aquamarine;
     }
 
-    legend {
+    legend{
         color: aquamarine;
+    }
+
+    input[type='number'] {
+        width: 80vw;
+        height: 3vh;
+        font-size: 2vh;
     }
 
     .modal {
@@ -178,35 +197,23 @@ input:focus {
         font-size: x-large;
     }
 
-    .yo {
-        width: 50svw;
-        height: 6svh;
+    button {
+        text-align: center;
+        font-size: x-large;
     }
 
-    .actionButtons{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .card button{
+    .card,button{
         font-size: x-large;
         padding: 5px;
         margin: 0;
         margin-top: 10px;
+        width: fit-content;
     }
 
-    .formButtons button {
-        height: 7svh;
-        color: rgb(21, 22, 22);
-        width: 30svw;
-        font-size: 3svw;
-    }
-
-    .formButtons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .formButtons,button {
+        height: 7vh;
+        width: 60vw;
+        font-size: 4vh;
     }
 
     .read {
@@ -215,9 +222,4 @@ input:focus {
         font-size: 4vh;
     }
   }
-
-  button:hover {
-    background-color: #27276a;
-    color: white;
-}
   
