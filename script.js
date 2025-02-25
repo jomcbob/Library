@@ -44,22 +44,17 @@ cancelBtn.addEventListener("click", () => {
 })
 
 submitBtn.addEventListener("click", () => {
-    modal.classList.add("hidden")    
-    addButton.classList.remove('hidden')
+    const book = createBook()
+    myLibrary.push(book)
+    displayBooks()
+    modal.classList.add("hidden")
     addBook()
     document.getElementById("input1").value = ''
     document.getElementById("input2").value = ''
     document.getElementById("input3").value = ''
     document.getElementById("input4").textContent = 'not read'
+    
 })
-
-const addBook = function (){
-    let book = new createBook(input1.value, input2.value, input3.value, !isRead)
-    myLibrary.push(book.giveValue())
-    console.log(myLibrary)
-    displayBooks()
-    isRead = false
-}
 
 function displayBooks() {
     const content = document.querySelector(".content");
