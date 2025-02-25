@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -7,22 +8,33 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header><h2>The Library</h2></header>
+    <header>
+        <h2>The Library</h2>
+    </header>
     <div class="content"></div>
 
     <form id="my-modal" class="modal hidden">
         <div class="container">
-            <legend><h2>Add a New Book</h2></legend>
-                <label for="input1">title</label>
-            <input type="text" name="input1" id="input1" >
+            <legend>
+                <h2>Add a New Book</h2>
+            </legend>
+            <div class="titleError error">
+            <label for="input1">title</label>
+                <input type="text" name="input1" id="input1" required minlength="3">
+            </div>
+            <div class="authorError error">
                 <label for="input2">author</label>
-            <input type="text" name="input2" id="input2">
+                <input type="text" name="input2" id="input2" required minlength="3">
+            </div>
+            <div class="pageError error">
                 <label for="input3">pages</label>
-            <input type="number" name="input3" id="input3">
+                <input type="number" name="input3" id="input3" required min="4">
+            </div>
             <div class="formButtons">
                 <button class="read" type="button" id="input4">not read </button>
-                <button id="submitButton" type="button">Add Book</button>
+                <button id="submitButton" type="submit">Add Book</button>
                 <button type="button" id="close">close</button>
             </div>
         </div>
@@ -30,4 +42,5 @@
 
     <button class="add">new book</button>
 </body>
+
 </html>
