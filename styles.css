@@ -1,17 +1,26 @@
 body {
     margin: 0;
-    padding: 0;
-    border: 0;
-    display: flex;
-    flex-direction: column;
     background-color: grey;
 }
 
+.actionButtons{
+    display: flex;
+    gap: 20px;
+}
+
+.yo {
+    width: 6svw;
+    height: 3svh;
+    font-size: large;
+    background-color: rgb(99, 99, 99);
+    color: white;
+    border-radius: 25px;
+    border: none;
+}
+
 header {
-    height: 10vh;
+    height: 10svh;
     background: linear-gradient(#695352, #505370);
-    margin: 0;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,49 +29,17 @@ header {
 }
 
 input {
-    width: calc(200px + 10vw);
-    height: 4svh;
+    width: calc(200px + 15vw);
+    height: calc(10px + 3svh);
     font-size: 3svh;
+    margin: 3svh;
     margin-top: 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 label {
     margin-top: 20px;
-    font-size: 3svh;
-}
-
-.invalid {
-    border-radius: 0 0 20px 20px;
-    width: calc(200px + 10vw);
-    background-color: red;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.valid{
-    border-radius: 0 0 20px 20px;
-    width: calc(200px + 10vw);
-    background-color: green;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.error{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    font-size: 2vh;
-    color: white;
-}
-
-.titleError:invalid {
-    background-color: red;
 }
 
 .container {
@@ -83,15 +60,9 @@ label {
     padding: 5px;
     border-radius: 35px;
     height: 5vh;
-    width: 8vw;
+    width: 10vw;
     font-size: large;
-}
-
-/* hide popup */
-button {
-    width: 80px;
     margin: 20px;
-
 }
 
 .modal {
@@ -121,7 +92,8 @@ button {
     border: 0;
     padding: 5px;
     border-radius: 10px;
-
+    margin: 2svw;
+    width: calc(30px + 5svw);
 }
 
 button:hover {
@@ -161,35 +133,35 @@ button:hover {
 }
 
 input:focus{
-    border: 3px solid black;
+    border: 4px solid black;
 }
 
 @media (width <= 1000px) {
     header {
-        font-size: 3vh;
+        font-size: 3svh;
     }
 
     .card {
         font-size: x-large;
-        width: 100vw;
+        width: 100svw;
     }
 
     .add {
-        width: 50vw;
-        height: 10vh;
-        font-size: 4vh;
+        width: 50svw;
+        height: 10svh;
+        font-size: 4svh;
     }
 
     .container{
-        width: 90vw;
-        height: 70vh;
+        width: 90svw;
+        height: 100svh;
         justify-content: start;
     }
 
     input {
-        width: 80vw;
-        height: 3vh;
-        font-size: 2vh;
+        width: 80svw;
+        height: 6svh;
+        font-size: 5svh;
     }
 
     label{
@@ -205,23 +177,35 @@ input:focus{
         font-size: x-large;
     }
 
-    button {
-        text-align: center;
-        font-size: x-large;
+    .yo {
+        width: 50svw;
+        height: 6svh;
     }
 
-    .card,button{
+    .actionButtons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card button{
         font-size: x-large;
         padding: 5px;
         margin: 0;
         margin-top: 10px;
-        width: fit-content;
     }
 
-    .formButtons,button {
-        height: 7vh;
-        width: 60vw;
-        font-size: 4vh;
+    .formButtons button {
+        height: 7svh;
+        color: rgb(21, 22, 22);
+        width: 30svw;
+        font-size: 3svw;
+    }
+
+    .formButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .read {
@@ -230,3 +214,9 @@ input:focus{
         font-size: 4vh;
     }
   }
+
+  button:hover {
+    background-color: #27276a;
+    color: white;
+}
+  
