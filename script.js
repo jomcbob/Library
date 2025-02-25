@@ -99,9 +99,3 @@ function displayBooks() {
 const readString = (read) => {
     return read ? 'not read' : 'read'
 }
-
-const deleteFolderButton = content.querySelector(`#delete-${index}`)
-deleteFolderButton.addEventListener("click", () => {
-    folders.splice(index, 1)
-    refresh()
-})
